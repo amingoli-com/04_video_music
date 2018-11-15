@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".activity_music">
 
-
+<!--btn playe-->
     <Button
         android:id="@+id/bb"
         android:layout_width="100dp"
@@ -16,6 +16,7 @@
         android:layout_marginTop="68dp"
         android:text="Playe" />
 
+<!--btn puse-->
     <Button
         android:id="@+id/bbb"
         android:layout_width="100dp"
@@ -24,4 +25,44 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="68dp"
         android:text="Puse" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/seekBar"
+        android:layout_alignStart="@+id/seekBar"
+        android:layout_marginBottom="-157dp"
+        android:text="Volume" />
+    <!--seek for volum-->
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="53dp"
+        android:layout_marginTop="157dp"
+        android:progress="50" />
+
+
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/seekBar"
+        android:layout_alignStart="@+id/seekBar"
+        android:text="Time Audio" />
+
+    <!--seek for Time-->
+    <SeekBar
+        android:id="@+id/seek_time"
+        android:progress="50"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView2"
+        android:layout_alignStart="@+id/seekBar" />
+
+
 </RelativeLayout>
