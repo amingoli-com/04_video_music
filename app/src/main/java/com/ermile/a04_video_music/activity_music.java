@@ -152,8 +152,11 @@ public class activity_music extends AppCompatActivity implements View.OnClickLis
     // if user lanche btn back music > stop!
     @Override
     protected void onStop() {
-        Toast.makeText ( this , "Stop Music :)" , Toast.LENGTH_SHORT ).show ( );
-        mmm.stop ();
+
+        if (mmm.isPlaying ()){
+            Toast.makeText ( this , "Stop Music :)" , Toast.LENGTH_SHORT ).show ( );
+            mmm.stop ();
+        }
         super.onStop ( );
     }
 }
