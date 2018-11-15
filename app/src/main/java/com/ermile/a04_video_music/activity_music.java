@@ -18,10 +18,12 @@ public class activity_music extends AppCompatActivity implements View.OnClickLis
         super.onCreate ( savedInstanceState );
         setContentView ( R.layout.activity_music );
 
-        mmm = MediaPlayer.create ( this,Uri.parse ( "http://dl.new-song.ir/music/96/12/Rastak%20Group%20Rana_(www.new-song.ir).mp3" ) );
+        mmm = MediaPlayer.create ( this,Uri.parse ( "http://dl.nicmusic.net/nicmusic/019/060/Relax%20Music%20-%20Nicmusic%20-%2001.mp3" ) );
 
         bb=findViewById ( R.id.bb );
+        bb.setVisibility ( View.VISIBLE );
         bbb=findViewById ( R.id.bbb );
+        bbb.setVisibility ( View.GONE );
 
         bb.setOnClickListener ( this );
         bbb.setOnClickListener ( this );
@@ -40,6 +42,14 @@ public class activity_music extends AppCompatActivity implements View.OnClickLis
                 break;
 
             default:break;
+        }
+        if (mmm.isPlaying ()){
+            bb.setVisibility ( View.GONE );
+            bbb.setVisibility ( View.VISIBLE );
+
+        }else if ( !mmm.isPlaying ()){
+            bb.setVisibility ( View.VISIBLE );
+            bbb.setVisibility ( View.GONE );
         }
     }
 
